@@ -1,0 +1,16 @@
+*.class
+
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.classpath
+.project
+
+.DS_Store
+Thumbs.db
