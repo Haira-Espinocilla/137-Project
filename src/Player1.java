@@ -9,8 +9,6 @@ import java.io.IOException;
 public class Player1 extends JPanel {
     private Image backgroundImage;
     
-    private EnemyShip enemy1 = new EnemyShip(100, 100);
-    
     private Image[] frames1 = new Image[8];
     private Image[] frames2 = new Image[8];
     
@@ -143,9 +141,7 @@ public class Player1 extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         if (backgroundImage != null) g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
-
-        enemy1.update(shipX, shipY); 
-        enemy1.draw(g, this);
+        
         // animation timing
         frameCounter = (frameCounter + 1) % 80;
         
@@ -162,7 +158,7 @@ public class Player1 extends JPanel {
         Image currentFrame = (frameCounter < 40) ? frames1[directionIndex] : frames2[directionIndex];
 
         if (currentFrame != null) {
-            g.drawImage(currentFrame, shipX, shipY, 200, 168, this);
+            g.drawImage(currentFrame, shipX, shipY, 240, 180, this);
         }
         
     }
